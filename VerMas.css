@@ -1,0 +1,114 @@
+body {
+    background-color: #f4f7fa;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+.event-container {
+background-color: #003366;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 30px;
+margin-top: 50px;
+max-width: 800px;
+margin: 0 auto;
+}
+
+/* Imagen de portada */
+.event-container img {
+width: 100%;
+height: 400px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+/* Título principal del evento */
+.event-header {
+font-size: 2.5rem;
+font-weight: bold;
+color: #ffffff;
+margin-top: 20px;
+}
+
+/* Estilo para los detalles del evento */
+.event-details p {
+font-size: 1.2rem;
+color: #ffffff;
+}
+
+.event-details strong {
+color: #ffffff;
+}
+
+/* Descripción del evento */
+.event-description p {
+font-size: 1.1rem;
+color: #ffffff;
+line-height: 1.6;
+margin-top: 20px;
+}
+
+/* Botón para regresar */
+.back-btn {
+background-color: #706f70;
+color: #fff;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+font-size: 1rem;
+transition: background-color 0.3s;
+position: absolute;
+bottom: 20px; /* Ajusta este valor según el espacio que desees desde la parte inferior */
+right: 20px; 
+margin-top: 20px; /* Añadir margen superior si lo necesitas */
+    margin-bottom: 20px; 
+
+}
+
+.back-btn:hover {
+background-color: #2980b9;
+}
+
+/* Estilo para el footer */
+.footer {
+background-color: #003366;
+color: #fff;
+padding: 20px;
+text-align: center;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+
+.footer p {
+margin: 0;
+font-size: 0.9rem;
+}
+
+.navbar {
+    background-color: #003366; /* Cambia este color por el que desees */
+}
+
+.navbar-brand {
+    color: white !important; /* Cambiar el color del logo/título */
+    font-size: 1.5rem; /* Cambiar el tamaño del texto */
+}
+
+/* Estilo para los botones de la tarjeta de evento */
+.card .btn {
+    padding: 12px 20px; /* Aumentar el tamaño del botón */
+    font-size: 1.1rem;  /* Hacer el texto más grande */
+    text-align: center; /* Asegurar que el texto esté centrado */
+    width: 100%; /* Hacer que los botones ocupen todo el ancho disponible */
+    margin-top: 10px; /* Añadir espacio encima del botón */
+}
+
+.card .btn-secondary {
+    background-color: #6c757d; /* Puedes cambiar el color de fondo */
+    color: white;
+    border: none; /* Eliminar borde si lo deseas */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.card .btn-secondary:hover {
+    background-color: #5a6268; /* Color al pasar el ratón */
+}

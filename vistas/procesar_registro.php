@@ -1,4 +1,11 @@
 <?php
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+?>
+
+
+
+<?php
 // Incluir el archivo de conexión
 require_once 'conex.php';
 
@@ -19,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Verificar si el correo ya existe
-    $sql_check = "SELECT ID_usuario FROM usuario WHERE Correo = ?";
+    $sql_check = "SELECT ID_usuario FROM Usuario WHERE Correo = ?";
     $stmt_check = $conn->prepare($sql_check);
     $stmt_check->bind_param("s", $email);
     $stmt_check->execute();
@@ -34,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
     // Insertar los datos en la base de datos
-    $sql = "INSERT INTO usuario (Nombre, Contrase_a, Correo) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO Usuario (Nombre, Contrase_a, Correo) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $nombre, $password_hash, $email);
 

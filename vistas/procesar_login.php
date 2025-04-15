@@ -1,4 +1,9 @@
 <?php
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+?>
+
+<?php
 // Iniciar la sesión
 session_start();
 
@@ -20,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Consultar la base de datos para verificar las credenciales
-    $sql = "SELECT ID_usuario, Contrase_a FROM usuario WHERE Correo = ?";
+    $sql = "SELECT ID_usuario, Contrase_a FROM Usuario WHERE Correo = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
